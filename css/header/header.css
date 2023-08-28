@@ -1,0 +1,56 @@
+header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--navy);
+  background-image: url(../../img/check-pattern.png);
+  background-size: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  animation: bgmove 150s infinite linear;
+}
+@media screen and (min-width:1000px) {
+  header {
+    height: 80px;
+  }
+}
+@media screen and (max-width:1000px) {
+  header {
+    height: 60px;
+  }
+}
+header .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  height: inherit;
+}
+header .center h1 {
+  height: 50%;
+}
+header .center h1 a {
+  display: flex;
+  height: 100%;
+  perspective: 1000px;
+}
+header .center h1 a img {
+  height: 100%;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+header .center h1:hover img:first-of-type {
+  transform: rotateY(360deg);
+}
+header .center h1:hover img:last-of-type {
+  transform: rotateX(360deg);
+}
+header .center .gnb a {
+  font-weight: 600;
+  transition: all 0.3s;
+}
+header .center .gnb a:hover {
+  color: var(--green);
+}/*# sourceMappingURL=header.css.map */

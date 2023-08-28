@@ -1,0 +1,59 @@
+@use "../mixin" as m;
+
+header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--navy);
+  background-image: url(../../img/check-pattern.png);
+  background-size: 15px;
+  @include m.box-shadow;
+  animation: bgmove 150s infinite linear;
+  @media #{m.$min-lg} {
+    height: 80px;
+  } //header min-lg
+  @media #{m.$max-lg} {
+    height: 60px;
+  } //header max-lg
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+    height: inherit;
+    h1 {
+      height: 50%;
+      a{
+        display: flex;
+        height: 100%;
+        perspective: 1000px;
+        img {
+          height: 100%;
+          margin-right: 10px;
+          transition: all .5s;
+        }//img
+      }//a
+      &:hover{
+        img:first-of-type{
+          transform: rotateY(360deg);
+        }//img:first-child
+        img:last-of-type{
+          transform: rotateX(360deg);
+        }//img:last-child
+      }//h1:hover
+    } //h1
+
+    .gnb{
+      a{
+        font-weight: 600;
+        transition: all .3s;
+        &:hover{
+          color:var(--green);
+        }//a:hover
+      }//a
+    }//gnb
+  } //center
+} //header
