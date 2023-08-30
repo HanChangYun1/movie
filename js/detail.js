@@ -1,6 +1,15 @@
 import { en, gradeColors, imgPaths } from "./api-data.js";
-import { getCredits, getImages, getMovie, getVideos } from "./api-functions.js";
-import { setSlide } from "./functions.js";
+import {
+  displayImages,
+  displayMovies,
+  displayVideos,
+  getCredits,
+  getImages,
+  getMovie,
+  getSimilarMovies,
+  getVideos,
+} from "./api-functions.js";
+import { qySel, setSlide, sortArray } from "./functions.js";
 
 let url = new URL(location.href);
 let params = new URLSearchParams(url.search);
@@ -74,3 +83,33 @@ if (videos.length === 0) {
 
 ///////////////////////////////////////////////////////
 setSlide(images.slice(0, 4));
+///////////////////////////////////////////////////////
+qySel(".poster").src = posterPath;
+qySel(".title").innerText = title;
+qySel(".vote-average").innerText = vote_average;
+qySel(".vote-average").style.background = gradeColor;
+qySel(".vote-cnt").innerText = `(${vote_count})`;
+qySel(".hour").innerText = hour;
+qySel(".min").innerText = min;
+qySel(".date").innerText = release_date;
+qySel(".genre").innerText = genres;
+qySel(".overview").innerText = overview;
+qySel(".original-title").innerText = original_title;
+qySel(".production").innerText = company;
+qySel(".producer").innerText = producers;
+qySel(".director").innerText = directors;
+///////////////////////////////////////////////
+const setSimilarSection = () => {
+  return new Promise(async (resolve) => {
+    let movieData = await getSimilarMovies(id);
+    let movies = movieData.results;
+    sortArray(movies, "popularity", -1);
+    displayMovies(movies, ".similar-section .grid-container");
+    resolve();
+  }); //Promise
+}; //setSimilarSection
+
+displayImages(images, ".img-section .grid-container");
+displayVideos(videos, ".video-section .grid-container");
+
+await setSimilarSection();

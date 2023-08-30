@@ -19,8 +19,11 @@
   <link rel="stylesheet" href="./css/common/slide.css">
   <link rel="stylesheet" href="./css/detail/detail-info.css">
   <link rel="stylesheet" href="./css/detail/detail-section.css">
+  <link rel="stylesheet" href="./css/viewbox.css">
   <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="./js/jquery.viewbox.min.js"></script>
   <script src="./js/common.js" type="module"></script>
   <title>movie</title>
 </head>

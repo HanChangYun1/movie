@@ -76,7 +76,7 @@ const setHomeSection = (option, section) => {
   return new Promise(async (resolve) => {
     const moviesData = await getMovies(option);
     let movies = moviesData.results.slice(0, 10);
-    await displayMovies(
+    displayMovies(
       movies,
       `${section} .carousel .swiper-wrapper`,
       "swiper-slide"

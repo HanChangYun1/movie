@@ -102,3 +102,11 @@ export const setSlide = (images) => {
     qySel(`.slide-img${n}`).classList.add("active");
   }, 5000);
 }; //setSlide
+
+export const sortArray = (arr, option, n) => {
+  arr.sort((a, b) => {
+    if (a[option] > b[option]) return n;
+    else if (a[option] < b[option]) return -n;
+    else return 0;
+  });
+}; //sortArray
