@@ -124,14 +124,32 @@ section.movie-grid-section {
 section.swiper-section {
   .carousel {
     position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 13;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      backdrop-filter: blur(2px) brightness(50%);
+    }
+    &::before {
+      right: 100%;
+    }
+    &::after {
+      left: 100%;
+    }
     &:hover {
       @media (hover: hover) {
-        .next, .prev {
+        .next,
+        .prev {
           opacity: 1;
         }
-      }//media hover
+      } //media hover
     } //carousel:hover
-    .next,.prev {
+    .next,
+    .prev {
       position: absolute;
       z-index: 12;
       top: 50%;

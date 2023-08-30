@@ -1,8 +1,7 @@
-@use '../mixin' as m;
+@use "../mixin" as m;
 
-main.home-content{
-  section.common-section{
+main.home-content {
+  section.common-section {
     width: min(90%, 1600px);
-    
-  }//section.common-section
-}//main.home-content
+  } //section.common-section
+} //main.home-content

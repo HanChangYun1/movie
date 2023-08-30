@@ -33,9 +33,7 @@
         background: green;
         filter: brightness(60%);
         transform: scale(1.1);
-        transition:
-          transform 10s linear,
-          filter 1s;
+        transition: transform 10s linear, filter 1s;
       } //img
       figcaption {
         position: absolute;
@@ -67,10 +65,24 @@
           }
           &.play-btn {
             margin-right: 5px;
-            @include m.button(#fff, #fff, rgba(#fff, 0.3), #000, #fff, rgba(#fff, 0.8));
+            @include m.button(
+              #fff,
+              #fff,
+              rgba(#fff, 0.3),
+              #000,
+              #fff,
+              rgba(#fff, 0.8)
+            );
           } //button.play-btn
           &.detail-btn {
-            @include m.button(#fff, #fff, rgba(#000, 0.3), #fff, #000, rgba(#000, 0.8));
+            @include m.button(
+              #fff,
+              #fff,
+              rgba(#000, 0.3),
+              #fff,
+              #000,
+              rgba(#000, 0.8)
+            );
           } //button.detail-btn
         } //button
       } //figcaption
@@ -95,14 +107,17 @@
       border: 1px solid rgba(#fff, 0.5);
       border-radius: 50%;
     } //before
-    i{
-      color : rgba(#fff, 0.7);
-      animation: jump .5s infinite alternate;
+    i {
+      color: rgba(#fff, 0.7);
+      animation: jump 0.5s infinite alternate;
     }
   } //wheel-btn
   @keyframes jump {
-    0%{transform: translateY(-3px);}
-    100%{transform: translateY(3px);}
-  }  
+    0% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(3px);
+    }
+  }
 } //home-visual
-

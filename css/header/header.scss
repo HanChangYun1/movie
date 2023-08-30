@@ -26,34 +26,57 @@ header {
     height: inherit;
     h1 {
       height: 50%;
-      a{
+      a {
         display: flex;
         height: 100%;
         perspective: 1000px;
         img {
           height: 100%;
           margin-right: 10px;
-          transition: all .5s;
-        }//img
-      }//a
-      &:hover{
-        img:first-of-type{
+          transition: all 0.5s;
+        } //img
+      } //a
+      &:hover {
+        img:first-of-type {
           transform: rotateY(360deg);
-        }//img:first-child
-        img:last-of-type{
+        } //img:first-child
+        img:last-of-type {
           transform: rotateX(360deg);
-        }//img:last-child
-      }//h1:hover
+        } //img:last-child
+      } //h1:hover
     } //h1
 
-    .gnb{
-      a{
+    .gnb {
+      a {
         font-weight: 600;
-        transition: all .3s;
-        &:hover{
-          color:var(--green);
-        }//a:hover
-      }//a
-    }//gnb
+        transition: all 0.3s;
+        &:hover {
+          color: var(--green);
+        } //a:hover
+      } //a
+    } //gnb
   } //center
 } //header
+
+.top-btn {
+  position: fixed;
+  z-index: 90;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--sky);
+  transition: all 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  @include m.box-shadow;
+  @media (hover: hover) {
+    &:hover {
+      background: var(--green);
+    }
+  } //media
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  } //active
+} //top-btn

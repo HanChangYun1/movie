@@ -16,8 +16,12 @@
   <link rel="stylesheet" href="./css/footer/footer.css">
   <link rel="stylesheet" href="./css/home/home-visual.css">
   <link rel="stylesheet" href="./css/home/home.css">
+  <link rel="stylesheet" href="./css/common/slide.css">
+  <link rel="stylesheet" href="./css/detail/detail-info.css">
+  <link rel="stylesheet" href="./css/detail/detail-section.css">
   <script src="https://kit.fontawesome.com/7d1f9ca95d.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="./js/common.js" type="module"></script>
   <title>movie</title>
 </head>
 
@@ -40,3 +44,7 @@
       </nav><!--gnb-->
     </div><!-- center -->
   </header>
+
+  <button class="top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
