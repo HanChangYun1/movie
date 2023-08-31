@@ -257,4 +257,34 @@ section.img-section .grid-container a {
 
 section.video-section .grid-container button {
   width: 250px;
+}
+
+section.people-section .grid-container figure {
+  width: 170px;
+}
+section.people-section .grid-container figure:hover figcaption {
+  background: var(--sky);
+}
+section.people-section .grid-container figure:hover figcaption em {
+  color: var(--navy);
+}
+section.people-section .grid-container figure figcaption {
+  position: relative;
+  background: var(--navy);
+  padding: 10px;
+  transition: all 0.3s;
+}
+section.people-section .grid-container figure figcaption em {
+  display: block;
+  color: var(--green);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+section.people-section .grid-container figure figcaption b {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-style: italic;
 }/*# sourceMappingURL=common-layout.css.map */

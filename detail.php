@@ -59,6 +59,14 @@
     </div><!-- detail-info -->
   </section> <!-- detail-section -->
 
+  <section class="common-section scroll-section people-section">
+    <h2>
+      <i class="fa-solid fa-users"></i>
+      <em>출연진</em>
+    </h2>
+    <div class="grid-container"></div>
+  </section>
+
   <section class="common-section scroll-section img-section">
     <h2>
       <i class="fa-solid fa-image"></i>
@@ -92,11 +100,12 @@
 
 
 
-<i class="fa-solid fa-users"></i>
+
 
 
 
  -->
 </main>
 <?php include "video-modal.php" ?>
+<?php include "person-modal.php" ?>
 <?php include "footer.php" ?>

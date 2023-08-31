@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/common/video-modal.css">
+  <link rel="stylesheet" href="./css/common/modal.css">
   <link rel="stylesheet" href="./css/common/common-layout.css">
   <link rel="stylesheet" href="./css/header/header.css">
   <link rel="stylesheet" href="./css/footer/footer.css">

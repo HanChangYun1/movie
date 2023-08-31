@@ -5,7 +5,13 @@ import {
   getMovies,
   getVideos,
 } from "./api-functions.js";
-import { qySel, qySelAll, setSwiper, videoResize } from "./functions.js";
+import {
+  qySel,
+  qySelAll,
+  setSwiper,
+  showModal,
+  videoResize,
+} from "./functions.js";
 
 const setVisual = () => {
   return new Promise(async (resolve) => {
@@ -52,7 +58,7 @@ const setVisual = () => {
 
     qySelAll(".home-visual .play-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        qySel(".video-modal").style.display = "block";
+        showModal(".video-modal");
         qySel(
           ".video-modal iframe"
         ).src = `http://www.youtube.com/embed/${e.target.value}?playlist=${e.target.value}&autoplay=1&loop=1&mute=1&playsinline=1"`;

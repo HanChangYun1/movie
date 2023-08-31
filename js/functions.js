@@ -110,3 +110,13 @@ export const sortArray = (arr, option, n) => {
     else return 0;
   });
 }; //sortArray
+
+export const showModal = (modal) => {
+  qySel(modal).style.display = "block";
+  document.body.style.overflow = "hidden";
+}; //showModal
+
+export const closeModal = (modal) => {
+  qySel(modal).style.display = "none";
+  document.body.style.overflow = "auto";
+}; //showModal
