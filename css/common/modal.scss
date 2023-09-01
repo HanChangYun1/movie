@@ -55,16 +55,14 @@ section.person-modal {
       }
     }
     ul {
+      height: 200px;
+      box-sizing: border-box;
       padding: 10px;
       border-radius: 5px;
       background: rgba(#fff, 0.2);
       overflow: hidden;
-      max-height: 200px;
-      margin-bottom: 10px;
-      transition: max-height 0.5s;
-      &.active {
-        max-height: 1000px;
-      }
+      margin-bottom: 20px;
+      transition: height 0.5s;
       li {
         padding: 5px;
         border-bottom: 1px dotted rgba(#fff, 0.5);
@@ -108,11 +106,9 @@ section.person-modal {
     .more-btn {
       margin-bottom: 30px;
       text-transform: uppercase;
-      width: 80px;
-      height: 30px;
-      line-height: 30px;
-      background: var(--navy);
-      border-radius: 5px;
+      font-size: 0.6em;
+      font-style: italic;
+      letter-spacing: 0.2em;
       transition: all 0.5s;
       &.active {
         .open {
@@ -124,10 +120,6 @@ section.person-modal {
       }
       .close {
         display: none;
-      }
-      &:hover {
-        background: var(--green);
-        color: var(--navy);
       }
     } //more-btn
   } //div.center

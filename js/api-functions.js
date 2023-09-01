@@ -11,6 +11,7 @@ import {
 import {
   qySel,
   qySelAll,
+  setPersonModal,
   showModal,
   sortArray,
   videoResize,
@@ -206,6 +207,7 @@ export const displayPeople = (data, container) => {
       displayProfile(profile);
       displayFilmography(filmography);
       showModal(".person-modal");
+      setPersonModal();
     });
   });
 }; //displayPeople
@@ -283,3 +285,21 @@ export const displayProfile = (profileData, lang = en) => {
   qySel(".person-biography").innerText = biography;
   qySel(".person-life").innerText = birthday;
 }; //displayPerson
+
+export let controller = new AbortController();
+let signal = controller.signal;
+
+export const searchByKeyword = (keyword, lang = ko) => {
+  return new Promise(async (resolve) => {
+    controller = new AbortController();
+    signal = controller.signal;
+    try {
+      const result = await fetch(
+        `${baseUrl}/search/movie${apiKey}${lang}&query=${keyword}`,
+        { signal }
+      );
+      const data = await result.json();
+      resolve(data);
+    } catch {}
+  });
+}; //searchByKeyword

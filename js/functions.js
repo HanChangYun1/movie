@@ -58,6 +58,20 @@ export const setSwiper = (el, sec = false, breakpoint = false) => {
   }); //new Swiper
 }; //setSwiper
 
+export const setPersonModal = () => {
+  qySelAll(".person-modal ul").forEach((ul) => {
+    if (ul.scrollHeight <= ul.clientHeight) {
+      //scrollHeight 문서의 길이, clientHeight 박스의 길이
+      ul.nextElementSibling.style.display = "none";
+    } else {
+      ul.nextElementSibling.style.display = "inline-block";
+    }
+  }); //forEach
+  qySelAll(".person-modal .more-btn").forEach((btn) => {
+    btn.classList.remove("active");
+  }); //forEach
+}; //setPersonModal
+
 export const videoResize = () => {
   let videoWidth = qySel(".youtube-ratio").clientWidth;
   let videoHeight = qySel(".youtube-ratio").clientHeight;

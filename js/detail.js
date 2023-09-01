@@ -87,8 +87,10 @@ setSlide(images.slice(0, 4));
 ///////////////////////////////////////////////////////
 qySel(".poster").src = posterPath;
 qySel(".title").innerText = title;
-qySel(".vote-average").innerText = vote_average;
-qySel(".vote-average").style.background = gradeColor;
+qySel(".average").innerText = vote_average;
+qySel(".average").style.color = gradeColor;
+qySel(".progress").style.strokeDashOffset = 10 - vote_average + "px";
+qySel(".progress").style.stroke = gradeColor;
 qySel(".vote-cnt").innerText = `(${vote_count})`;
 qySel(".hour").innerText = hour;
 qySel(".min").innerText = min;
