@@ -48,7 +48,7 @@ section.common-section {
   padding: 30px 0;
   margin: 0 auto;
 }
-section.common-section .no-data {
+section.common-section p.no-data {
   font-style: italic;
   margin-left: 10px;
   color: var(--green);
@@ -75,12 +75,6 @@ section.common-section h2::after {
   margin-left: 10px;
 }
 
-section.movie-grid-section div.grid-container .no-data {
-  font-style: italic;
-  margin-left: 10px;
-  color: var(--green);
-  text-decoration: line-through;
-}
 section.movie-grid-section div.grid-container figure {
   padding: 0 10px;
   box-sizing: border-box;
@@ -168,6 +162,7 @@ section.swiper-section .carousel::after {
 }
 section.swiper-section .carousel .next,
 section.swiper-section .carousel .prev {
+  display: none;
   position: absolute;
   z-index: 12;
   top: 50%;
@@ -175,6 +170,12 @@ section.swiper-section .carousel .prev {
   font-size: 3em;
   opacity: 0;
   transition: opacity 0.5s;
+}
+@media (hover: hover) {
+  section.swiper-section .carousel .next,
+  section.swiper-section .carousel .prev {
+    display: block;
+  }
 }
 section.swiper-section .carousel .prev {
   left: 0;
@@ -236,7 +237,7 @@ section.scroll-section .grid-container {
 section.scroll-section .grid-container > * {
   flex-shrink: 0;
   overflow: hidden;
-  margin-right: 20px;
+  margin-right: 15px;
   box-sizing: border-box;
   border: 5px solid #eee;
 }
@@ -259,29 +260,29 @@ section.video-section .grid-container button {
   width: 250px;
 }
 
-section.people-section .grid-container figure {
+section.people-section figure {
   width: 170px;
 }
-section.people-section .grid-container figure:hover figcaption {
+section.people-section figure:hover figcaption {
   background: var(--sky);
 }
-section.people-section .grid-container figure:hover figcaption em {
+section.people-section figure:hover figcaption em {
   color: var(--navy);
 }
-section.people-section .grid-container figure figcaption {
+section.people-section figure figcaption {
   position: relative;
   background: var(--navy);
   padding: 10px;
   transition: all 0.3s;
 }
-section.people-section .grid-container figure figcaption em {
+section.people-section figure figcaption em {
   display: block;
   color: var(--green);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-section.people-section .grid-container figure figcaption b {
+section.people-section figure figcaption b {
   display: block;
   white-space: nowrap;
   overflow: hidden;

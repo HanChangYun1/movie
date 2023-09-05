@@ -2,12 +2,12 @@
 <script src="./js/home.js" type="module"></script>
 
 <section class="home-visual">
-  <div class="swiper-wrapper"> 
+  <div class="swiper-wrapper">
   </div><!-- swiper-wrapper -->
 
   <button class="prev"></button>
   <button class="next"></button>
-  
+
   <button class="wheel-btn">
     <i class="fa-solid fa-arrow-down"></i>
   </button>
@@ -69,6 +69,7 @@
       <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div><!--grid-container-->
   </section>
+
 </main><!-- main -->
 
 <?php include "video-modal.php" ?>

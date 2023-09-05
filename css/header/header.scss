@@ -26,39 +26,72 @@ header {
     height: inherit;
     h1 {
       height: 50%;
-      a {
+      a{
         display: flex;
         height: 100%;
         perspective: 1000px;
         img {
           height: 100%;
           margin-right: 10px;
-          transition: all 0.5s;
-        } //img
-      } //a
-      &:hover {
-        img:first-of-type {
+          transition: all .5s;
+        }//img
+      }//a
+      &:hover{
+        img:first-of-type{
           transform: rotateY(360deg);
-        } //img:first-child
-        img:last-of-type {
+        }//img:first-child
+        img:last-of-type{
           transform: rotateX(360deg);
-        } //img:last-child
-      } //h1:hover
+        }//img:last-child
+      }//h1:hover
     } //h1
 
-    .gnb {
-      a {
+    .gnb{
+      position: relative;
+      div.menu-list{
+        position: absolute;
+        top:0;
+        right: 110%;
+        display: inline-block;
+        button.toggle-btn{
+          &:active{
+            color:var(--green);
+          } //hover
+        }//button.toggle-btn
+        ul{
+          display: none;
+          position: absolute;
+          padding: 20px;
+          top:30px;
+          left:50%;
+          transform: translate(-50%);
+          border-radius: 5px;
+          background: #000;
+          &.active{
+            display: block;
+          }//active
+          li{
+            margin:7px 0;
+            white-space: nowrap;
+            a:hover{
+              color:var(--green);
+              text-decoration: underline;
+            }
+          }
+        }//ul
+      }//div.menu-list
+      a.goto-search{
         font-weight: 600;
-        transition: all 0.3s;
-        &:hover {
-          color: var(--green);
-        } //a:hover
-      } //a
-    } //gnb
+        transition: all .3s;
+        &:hover{
+          color:var(--green);
+        }//a:hover
+      }//a
+    }//gnb
   } //center
 } //header
 
-.top-btn {
+.top-btn{
   position: fixed;
   z-index: 90;
   right: 20px;
@@ -66,17 +99,17 @@ header {
   width: 40px;
   height: 40px;
   background: var(--sky);
-  transition: all 0.5s;
+  transition: all .5s;
   opacity: 0;
   pointer-events: none;
   @include m.box-shadow;
-  @media (hover: hover) {
-    &:hover {
+  @media (hover:hover){
+    &:hover{
       background: var(--green);
     }
-  } //media
-  &.active {
+  }//media
+  &.active{
     opacity: 1;
     pointer-events: all;
-  } //active
-} //top-btn
+  }//active
+}//top-btn

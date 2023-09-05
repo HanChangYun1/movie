@@ -27,10 +27,10 @@ section.video-modal iframe {
 section.person-modal {
   display: none;
   position: fixed;
-  width: 100%;
-  height: 100%;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
   overflow: auto;
   z-index: 101;
   background: rgba(0, 0, 0, 0.85);
@@ -53,7 +53,7 @@ section.person-modal {
   }
 }
 section.person-modal div.center {
-  width: min(90%, 700px);
+  width: min(90%, 600px);
   margin: 10vh auto;
   text-align: center;
 }
@@ -61,28 +61,25 @@ section.person-modal div.center img.person-photo {
   width: min(60%, 300px);
   margin: 0 auto;
   margin-bottom: 30px;
-  border: 5px solid #eee;
+  border: 5px solid #EEE;
 }
 section.person-modal div.center h4 {
   margin-bottom: 20px;
+  padding-bottom: 10px;
   text-align: left;
   color: var(--green);
   font-style: italic;
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 600;
-  padding-bottom: 10px;
   border-bottom: 1px solid var(--green);
-}
-section.person-modal div.center h4 i {
-  margin-right: 5px;
 }
 section.person-modal div.center ul {
   height: 200px;
   box-sizing: border-box;
   padding: 10px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   overflow: hidden;
   margin-bottom: 20px;
   transition: height 0.5s;
@@ -106,7 +103,7 @@ section.person-modal div.center ul.profile li em {
 section.person-modal div.center ul.filmography li time {
   opacity: 0.7;
   margin-right: 10px;
-  font-size: 0.8em;
+  font-style: italic;
 }
 section.person-modal div.center ul.filmography li a em {
   font-size: 1.1em;
@@ -118,21 +115,21 @@ section.person-modal div.center ul.filmography li a:hover {
   color: var(--green);
   text-decoration: underline;
 }
-section.person-modal div.center .more-btn {
+section.person-modal .more-btn {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-size: 0.6em;
+  transition: all 0.3s;
   font-style: italic;
   letter-spacing: 0.2em;
-  transition: all 0.5s;
 }
-section.person-modal div.center .more-btn.active .open {
+section.person-modal .more-btn.active .open {
   display: none;
 }
-section.person-modal div.center .more-btn.active .close {
+section.person-modal .more-btn.active .close {
   display: block;
 }
-section.person-modal div.center .more-btn .close {
+section.person-modal .more-btn .close {
   display: none;
 }
 

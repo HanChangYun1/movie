@@ -57,7 +57,7 @@ apikey발급
   /search/person?{apikey}&{lang}&query=bong+jun+ho
   장르별검색
     · 액션,모험 장르 예시 (language옵션 미제공)
-      https://api.themoviedb.org/3/discover/movie/list?api_key={apikey}&with_genres=28,35
+      https://api.themoviedb.org/3/discover/movie?api_key={apikey}&with_genres=28,35
 
 ----------------------------------------------------------------
 

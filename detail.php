@@ -1,8 +1,6 @@
 <?php include "header.php" ?>
 <script src="./js/detail.js" type="module"></script>
-<figure class="slide">
-  <!-- 동적생성 -->
-</figure>
+<figure class="slide"><!-- 동적생성 --></figure>
 <main class="detail-content">
   <section class="detail-section">
     <img class="poster" src="" alt="">
@@ -11,9 +9,9 @@
       <ul class="meta">
         <li>
           <div class="vote-average">
-            <svg  viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="35" class="stroke"/>
-              <circle cx="50" cy="50" r="35" pathLength="10" class="progress"/>
+            <svg viewbox="0 0 100 100">
+              <circle cx="50" cy="50" r="35"  class="stroke" />
+              <circle cx="50" cy="50" r="35" pathLength="10"  class="progress" />
             </svg>
             <b class="average"></b>
             <img class="logo-small" src="./img/logo-square.png" alt="">
@@ -36,9 +34,8 @@
           <small class="genre"></small>
         </li>
       </ul><!-- meta -->
-      <p class="overview">
 
-      </p><!-- p.overview -->
+      <p class="overview"></p><!--overview-->
 
       <ul class="info">
         <li>
@@ -62,15 +59,15 @@
           <em class="director"></em>
         </li>
       </ul>
-    </div><!-- detail-info -->
-  </section> <!-- detail-section -->
+    </div><!--detail-info-->
+  </section><!-- detail-section -->
 
   <section class="common-section scroll-section people-section">
     <h2>
       <i class="fa-solid fa-users"></i>
       <em>출연진</em>
     </h2>
-    <div class="grid-container"></div>
+    <div class="grid-container"><!-- 동적생성 --></div>
   </section>
 
   <section class="common-section scroll-section img-section">
@@ -78,39 +75,25 @@
       <i class="fa-solid fa-image"></i>
       <em>관련 이미지</em>
     </h2>
-    <div class="grid-container"></div>
+    <div class="grid-container"><!-- 동적생성 --></div>
   </section>
 
   <section class="common-section scroll-section video-section">
     <h2>
-      <i class="fa-solid fa-video"></i>
+      <i class="fa-solid fa-video"></i> 
       <em>관련 영상</em>
     </h2>
-    <div class="grid-container"></div>
+    <div class="grid-container"><!-- 동적생성 --></div>
   </section>
 
   <section class="common-section movie-grid-section wrap-section similar-section">
     <h2>
       <i class="fa-solid fa-photo-film"></i>
       <em>유사한 영화들</em>
-    </h2><!-- h2 -->
-    <div class="grid-container">
-
-    </div><!-- grid-container -->
+    </h2>
+    <div class="grid-container"><!-- 동적추가 --></div>
   </section>
 
-  <!-- 
-
-
-
-
-
-
-
-
-
-
- -->
 </main>
 <?php include "video-modal.php" ?>
 <?php include "person-modal.php" ?>

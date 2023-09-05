@@ -1,30 +1,32 @@
-@use "../mixin" as m;
-.slide {
+@use '../mixin' as m;
+.slide{
   position: absolute;
-  top: 60px;
+  top:60px;
   width: 100%;
   overflow: hidden;
+
   -webkit-mask-image: url(../../img/mask.png);
   -webkit-mask-size: 100% 100%;
   mask-image: url(../../img/mask.png);
   mask-size: 100% 100%;
-  @media #{m.$min-lg} {
+
+  @media #{m.$min-lg}{
     height: 40vh;
     filter: brightness(30%);
   }
-  @media #{m.$max-lg} {
+  @media #{m.$max-lg}{
     height: 50vh;
     filter: brightness(70%);
   }
-  img {
+  img{
     position: absolute;
     transform: scale(1.1);
     opacity: 0;
-    @include m.cover;
+    @include m.cover; 
     transition: transform 10s linear, opacity 1s;
-    &.active {
+    &.active{ 
       opacity: 1;
       transform: scale(1);
-    } //active
-  } //img
-} //slide
+    }//active
+  }//img
+}//slide
